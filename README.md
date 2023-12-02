@@ -1,3 +1,3 @@
 # apna-college-demo
-this is my first GIT repository
+this is my first GIT repository <br>
 author=vaibhav behal
