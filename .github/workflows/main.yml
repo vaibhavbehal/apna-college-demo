@@ -12,5 +12,8 @@ jobs:
       - name: Step 1 - Get code
         uses: actions/checkout@v3
 
-      - name: Step 2 - Print message
-        run: echo "CI/CD is working 🚀"
+      - name: Step 2 - Inject DB URL
+        run: echo "SPRING_DATASOURCE_URL=${{ secrets.DB_URL }}" >> $GITHUB_ENV
+
+      - name: Step 3 - Print DB URL
+        run: echo $SPRING_DATASOURCE_URL
